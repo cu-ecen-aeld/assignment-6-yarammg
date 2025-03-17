@@ -2,7 +2,7 @@
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-yarammg;protocol=ssh;branch=master"
+SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-yarammg;protocol=ssh;branch=main"
 
 PV = "1.0+git${SRCPV}"
 SRCREV = "56c92310f90fe2d1863a6e98882d053b5478536b"
@@ -42,5 +42,5 @@ do_install () {
 	install -d ${D}${bindir}
 	install -m 0755 ${S}/aesdsocket ${D}${bindir}/
 	install -d ${D}${sysconfdir}/init.d
-	install -m ${S}/aesdsocket-start-stop.sh ${D}${sysconfdir}/init.d/aesdsocket-start-stop.sh
+	install -m  0755 ${S}/aesdsocket-start-stop.sh ${D}${sysconfdir}/init.d/
 }
